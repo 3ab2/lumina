@@ -1,0 +1,12 @@
+{
+  "php.validate.enable": false,
+  "php.suggest.basic": false,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/.vscode/**"
+  ]
+}
