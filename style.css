@@ -1,0 +1,112 @@
+/*
+Theme Name: Lumina
+Theme URI: https://lumina.example.com
+Author: Antigravity
+Author URI: https://github.com/antigravity
+Description: A premium, minimal, and high-end personal portfolio theme for creatives.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lumina
+Tags: portfolio, minimal, agency, clean, responsive, high-end
+*/
+
+/* 
+ * Design System - CSS Variables
+ * Following the Neo-Minimalist / Premium direction
+ */
+:root {
+    /* Colors */
+    --color-bg: #0A0A0A;
+    --color-text: #F5F5F7;
+    --color-text-dim: #94A3B8;
+    --color-accent: #6366F1;
+    --color-accent-hover: #4F46E5;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-glass: rgba(255, 255, 255, 0.03);
+    
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    /* Spacing */
+    --space-unit: 1rem;
+    --container-width: 1200px;
+    
+    /* Transitions */
+    --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 0.3s ease;
+}
+
+/* Base Reset & Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--color-text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 8rem 0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-slow);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism Subtle */
+.glass {
+    background: var(--color-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
